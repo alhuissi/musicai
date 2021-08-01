@@ -1,127 +1,98 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br />
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener"
-        >vue-cli documentation</a
-      >.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel"
-          target="_blank"
-          rel="noopener"
-          >babel</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router"
-          target="_blank"
-          rel="noopener"
-          >router</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-vuex"
-          target="_blank"
-          rel="noopener"
-          >vuex</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint"
-          target="_blank"
-          rel="noopener"
-          >eslint</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-typescript"
-          target="_blank"
-          rel="noopener"
-          >typescript</a
-        >
-      </li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li>
-        <a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a>
-      </li>
-      <li>
-        <a href="https://forum.vuejs.org" target="_blank" rel="noopener"
-          >Forum</a
-        >
-      </li>
-      <li>
-        <a href="https://chat.vuejs.org" target="_blank" rel="noopener"
-          >Community Chat</a
-        >
-      </li>
-      <li>
-        <a href="https://twitter.com/vuejs" target="_blank" rel="noopener"
-          >Twitter</a
-        >
-      </li>
-      <li>
-        <a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a>
-      </li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li>
-        <a href="https://router.vuejs.org" target="_blank" rel="noopener"
-          >vue-router</a
-        >
-      </li>
-      <li>
-        <a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-devtools#vue-devtools"
-          target="_blank"
-          rel="noopener"
-          >vue-devtools</a
-        >
-      </li>
-      <li>
-        <a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener"
-          >vue-loader</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-          rel="noopener"
-          >awesome-vue</a
-        >
-      </li>
-    </ul>
+
+    <button id='btn'>Play</button>
+
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
+import * as mm from "@magenta/music/es6";
 
 export default Vue.extend({
   name: "HelloWorld",
   props: {
     msg: String,
   },
+  mounted() {
+    const FULL_TWINKLE: mm.INoteSequence = {
+      notes: [
+        { pitch: 60, quantizedStartStep: 0, quantizedEndStep: 2, program: 0 },
+        { pitch: 60, quantizedStartStep: 2, quantizedEndStep: 4, program: 0 },
+        { pitch: 67, quantizedStartStep: 4, quantizedEndStep: 6, program: 0 },
+        { pitch: 67, quantizedStartStep: 6, quantizedEndStep: 8, program: 0 },
+        { pitch: 69, quantizedStartStep: 8, quantizedEndStep: 10, program: 0 },
+        { pitch: 69, quantizedStartStep: 10, quantizedEndStep: 12, program: 0 },
+        { pitch: 67, quantizedStartStep: 12, quantizedEndStep: 16, program: 0 },
+        { pitch: 65, quantizedStartStep: 16, quantizedEndStep: 18, program: 0 },
+        { pitch: 65, quantizedStartStep: 18, quantizedEndStep: 20, program: 0 },
+        { pitch: 64, quantizedStartStep: 20, quantizedEndStep: 22, program: 0 },
+        { pitch: 64, quantizedStartStep: 22, quantizedEndStep: 24, program: 0 },
+        { pitch: 62, quantizedStartStep: 24, quantizedEndStep: 26, program: 0 },
+        { pitch: 62, quantizedStartStep: 26, quantizedEndStep: 28, program: 0 },
+        { pitch: 60, quantizedStartStep: 28, quantizedEndStep: 32, program: 0 },
+        { pitch: 67, quantizedStartStep: 32, quantizedEndStep: 34, program: 0 },
+        { pitch: 67, quantizedStartStep: 34, quantizedEndStep: 36, program: 0 },
+        { pitch: 65, quantizedStartStep: 36, quantizedEndStep: 38, program: 0 },
+        { pitch: 65, quantizedStartStep: 38, quantizedEndStep: 40, program: 0 },
+        { pitch: 64, quantizedStartStep: 40, quantizedEndStep: 42, program: 0 },
+        { pitch: 64, quantizedStartStep: 42, quantizedEndStep: 44, program: 0 },
+        { pitch: 62, quantizedStartStep: 44, quantizedEndStep: 48, program: 0 },
+        { pitch: 67, quantizedStartStep: 48, quantizedEndStep: 50, program: 0 },
+        { pitch: 67, quantizedStartStep: 50, quantizedEndStep: 52, program: 0 },
+        { pitch: 65, quantizedStartStep: 52, quantizedEndStep: 54, program: 0 },
+        { pitch: 65, quantizedStartStep: 54, quantizedEndStep: 56, program: 0 },
+        { pitch: 64, quantizedStartStep: 56, quantizedEndStep: 58, program: 0 },
+        { pitch: 64, quantizedStartStep: 58, quantizedEndStep: 60, program: 0 },
+        { pitch: 62, quantizedStartStep: 60, quantizedEndStep: 64, program: 0 },
+        { pitch: 60, quantizedStartStep: 64, quantizedEndStep: 66, program: 0 },
+        { pitch: 60, quantizedStartStep: 66, quantizedEndStep: 68, program: 0 },
+        { pitch: 67, quantizedStartStep: 68, quantizedEndStep: 70, program: 0 },
+        { pitch: 67, quantizedStartStep: 70, quantizedEndStep: 72, program: 0 },
+        { pitch: 69, quantizedStartStep: 72, quantizedEndStep: 74, program: 0 },
+        { pitch: 69, quantizedStartStep: 74, quantizedEndStep: 76, program: 0 },
+        { pitch: 67, quantizedStartStep: 76, quantizedEndStep: 80, program: 0 },
+        { pitch: 65, quantizedStartStep: 80, quantizedEndStep: 82, program: 0 },
+        { pitch: 65, quantizedStartStep: 82, quantizedEndStep: 84, program: 0 },
+        { pitch: 64, quantizedStartStep: 84, quantizedEndStep: 86, program: 0 },
+        { pitch: 64, quantizedStartStep: 86, quantizedEndStep: 88, program: 0 },
+        { pitch: 62, quantizedStartStep: 88, quantizedEndStep: 90, program: 0 },
+        { pitch: 62, quantizedStartStep: 90, quantizedEndStep: 92, program: 0 },
+        { pitch: 60, quantizedStartStep: 92, quantizedEndStep: 96, program: 0 },
+      ],
+      tempos: [{ time: 0, qpm: 60 }],
+      quantizationInfo: { stepsPerQuarter: 4 },
+      totalQuantizedSteps: 96,
+    };
+
+    const btn = document.getElementById("btn") as HTMLButtonElement;
+    const player = new mm.SoundFontPlayer(
+      "https://storage.googleapis.com/magentadata/js/soundfonts/salamander",
+      undefined,
+      undefined,
+      undefined,
+      undefined
+    );
+    player.loadSamples(FULL_TWINKLE).then(() => {
+      btn.textContent = "Play";
+      btn.disabled = false;
+    });
+
+    btn.addEventListener("click", () => {
+      if (player.isPlaying()) {
+        btn.textContent = "Play";
+        player.stop();
+      } else {
+        btn.textContent = "Stop";
+        player.start(FULL_TWINKLE);
+      }
+    });
+  },
 });
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h3 {
   margin: 40px 0 0;
