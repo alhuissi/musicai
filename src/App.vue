@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-app-bar app color="primary" dark>
-      <div>Musicai</div>
+      <div>Music AI Improviser</div>
       <v-spacer></v-spacer>
       <div></div>
     </v-app-bar>
